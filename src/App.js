@@ -1,47 +1,109 @@
-import React, { Component } from 'react';
-
-import Toolbar from './components/Toolbar/Toolbar';
+import React, {Component} from 'react';
+import './App.css';
+import Header from './components/Header/Header';
 import Slider from './components/Slider/Slider';
-import Content from './components/Content/Content';
-import BandList from './components/Content/Band/BandList/BandList';
+import Band from './components/Band/Band';
+import Tour from './components/Tour/Tour';
+import Contact from './components/Contact/Contact';
+import Map from './components/Map/Map';
 import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal';
+
 
 class App extends Component {
-    render() {  
-        return (
-        <div className="App">
-            <Toolbar />
+  render() {  
+    return ( 
+      <div id="layout">
+        <div id="main">
+          <Header />
+              
+          <Slider />
+          <div id="content">
+            <Band />
+            <Tour />
+            <Contact />
+            <Map />
+          </div>
+          <Footer />
         </div>
-        );
-    }
-    render() {
-        return (
-        <div className="App">
-            <Slider />
-        </div>
-        );
-    }
-    render() {
-        return (
-        <div className="App">
-            <Content />
-        </div>
-        );
-    }
-    render() {
-        return (
-            <div className="App">
-                <BandList />
-            </div>
-            );
-    }
-    render () {
-        return (
-        <div className="App">
-            <Footer />
-        </div>
-        );
-    }
+        <Modal />
+      </div>
+    );
+  }
 }
-  
+
+         
 export default App;
+
+{/* // <div id="mobile-menu" className="mobile-menu-btn">
+            //     <i className="menu-icon ti-menu"></i>
+            // </div>
+            // * <!-- Begin: Search button --> *
+            // <div className="search-btn">
+            //     <i className="search-icon ti-search"></i>
+            // </div>
+<script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const modal = document.querySelector('.modal');
+        const modalClose = document.querySelector('.js-modal-close');
+        const modalContainer = document.querySelector('.js-modal-container');
+
+        function showBuyTickets() {
+            modal.classList.add('open');
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open');
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets);
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets);
+        modal.addEventListener('click', hideBuyTickets);
+
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();
+        })
+    </script>
+
+    <script>
+         Click menu-button thi open, click cai nua thi close
+        var headerElement = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = headerElement.clientHeight;
+
+        mobileMenu.onclick = function () {
+            var isClosed = headerElement.clientHeight === headerHeight;
+            if (isClosed) {
+                headerElement.style.height = 'auto';
+            } else {
+                headerElement.style.height = null; an menu di
+            }
+        }
+
+         Tu dong dong menu 
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+
+        for (i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function (Event) {
+                var isParentMenu = this.menuItem.nextElementSibling && this.menuItem.nextElementSibling.classList.contains('subnav');
+                console.log(isParentMenu);
+                if (isParentMenu) {
+                    event.preventDefault;
+                } else {
+                    headerElement.style.height = null;
+
+                }
+            }
+
+        }
+    </script>
+
+
+    
+
+ */}
