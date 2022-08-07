@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > .item {
+    > .name {
+      font-size: 15px;
+    }
+
+    > .img {
+      margin-top: 15px;
+      width: 154px;
+      border-radius: 4px;
+    }
+  }
+}
+
+ 

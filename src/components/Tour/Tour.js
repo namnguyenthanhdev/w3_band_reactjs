@@ -2,23 +2,32 @@ import React, {Component} from 'react';
 import TourContent from './TourContent/TourContent';
 import TourPlacesList from './TourPlaces/TourPlaces';
 import TourTicketList from './TourTicket/TourTicket';
+import Modal from "../Modal/Modal";
 
 
 class Tour extends Component {
     constructor(props) {
         super(props);
-        this.state = tourComponent;
+        this.state = {
+            isOpenTourModal: false,
+            tourComponent: tourComponent
+        }
+    }
+
+    onTourPlaceItemClick = () => {
+        this.setState({isOpenModal: true});
     }
 
     render() {
+        const {isOpenModal} = this.state || {};
         return (
             <div id="tour" className="tour-section">
+                {isOpenModal && <Modal/>}
                 <div className="content-sections">
                     <TourContent tourHeading={this.state.heading} tourSubHeading={this.state.subHeading}/>
-                    <TourTicketList tourTicketList={this.state.ticketInfo} />
-                    
-                            <TourPlacesList tourPlacesList={this.state.placeInfo} />
-                    
+                    <TourTicketList tourTicketList={this.state.ticketInfo}/>
+                    <TourPlacesList onItemClick={this.onTourPlaceItemClick} tourPlacesList={this.state.placeInfo}/>
+
                 </div>
             </div>
         );
@@ -70,8 +79,6 @@ const tourComponent = {
 export default Tour;
 
 
-
-
 {/* <div className="row place-list">
                         <div className="mt-16 s-col-full col col-third">
                             <img src={require("../../assets/img/places/place1.jpg")} alt="New York" className="place-img"/>
@@ -100,4 +107,5 @@ export default Tour;
                                 <button className="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                    </div> */}
+                    </div> */
+}

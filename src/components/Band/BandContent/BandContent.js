@@ -1,17 +1,19 @@
 import React from 'react';
+import styles from './BandContent.module.scss';
+import cx from 'classnames';
 
-const BandContent = (props) => {
-    const propsContent = props.bandContent;
+function BandContent(props) {
+    const {className, aboutText, heading, subHeading} = props;
     return (
-        <div>
-            <h2 className="section-heading">
-                {propsContent.bandHeading}
+        <div className={cx(styles.container, className)}>
+            <h2 className={styles.heading}>
+                {heading}
             </h2>
-            <p className="section-sub-heading">
-                {propsContent.bandSubHeading}
+            <p className={styles.subHeading}>
+                {subHeading}
             </p>
-            <p className="about-text">
-                {propsContent.bandAboutText}
+            <p className={styles.text}>
+                {aboutText}
             </p>
         </div>
     );

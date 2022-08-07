@@ -2,47 +2,53 @@ import React from 'react';
 import Modal from '../../Modal/Modal';
 
 const TourPlacesItem = (props) => {
-    const tourPlaces = props.propsTourPlaces;
+
+    const {
+        onClick = () => {
+        }, propsTourPlaces = {}
+    } = props;
+    const {image, heading, time, description} = propsTourPlaces;
+
+    function handleClick() {
+        onClick && onClick(propsTourPlaces);
+    }
+
     return (
-        <div>
-            <img src={tourPlaces.image} alt={tourPlaces.heading} className="place-img"/>
+        <div onClick={handleClick}>
+            <img src={image} alt={heading} className="place-img"/>
             <div className="place-content">
-                <h3 className="place-heading">
-                    {tourPlaces.heading}
-                </h3>
-                <p className="place-time">
-                    {tourPlaces.time}
-                </p>
-                <p className="place-desc">
-                    {tourPlaces.description}
-                </p>
+                <h3 className="place-heading">{heading}</h3>
+                <p className="place-time">{time}</p>
+                <p className="place-desc">{description}</p>
                 <button className="btn s-full-width" onClick={handleClick}>Buy Tickets</button>
             </div>
         </div>
     );
 }
 
-
-
-const handleClick = () => {
-    
-}
-
-
-
+ 
 const TourPlacesList = (props) => {
-    const propsTourPlacesList = props.tourPlacesList || {};
+    const {
+        tourPlacesList: propsTourPlacesList = [],
+        onItemClick = () => {
+        }
+    } = props;
+
+    function handleItemClick(item) {
+        onItemClick && onItemClick(item);
+    }
+
     const renderTourPlaces = (tourPlaceItem) => {
-        return (<TourPlacesItem propsTourPlaces={tourPlaceItem} />);
+        return (<TourPlacesItem onClick={handleItemClick} propsTourPlaces={tourPlaceItem}/>);
     }
 
     return (
-        <div className="row place-list" >
+        <div className="row place-list">
             <div className="mt-16 s-col-full col col-third">
-                {propsTourPlacesList && propsTourPlacesList.map(renderTourPlaces)}  
+                {propsTourPlacesList && propsTourPlacesList.map(renderTourPlaces)}
             </div>
-            
-        </div>  
+
+        </div>
     );
 };
 

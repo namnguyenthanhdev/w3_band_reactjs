@@ -1,39 +1,39 @@
 import React, {Component} from 'react';
-import './App.css';
-import Header from './components/Header/Header';
-import Slider from './components/Slider/Slider';
-import Band from './components/Band/Band';
-import Tour from './components/Tour/Tour';
-import Contact from './components/Contact/Contact';
-import Map from './components/Map/Map';
-import Footer from './components/Footer/Footer';
-import Modal from './components/Modal/Modal';
+import './HomePage.css';
+import Header from '../../components/Header/Header';
+import Slider from '../../components/Slider/Slider';
+import Band from '../../components/Band/Band';
+import Tour from '../../components/Tour/Tour';
+import Contact from '../../components/Contact/Contact';
+import Map from '../../components/Map/Map';
+import Footer from '../../components/Footer/Footer';
 
 
-class App extends Component {
+
+class HomePage extends Component {
   render() {  
     return ( 
       <div id="layout">
         <div id="main">
-          <Header />
-              
+          <Header  />
           <Slider />
           <div id="content">
-            <Band />
+            <Band className={"firstBand"}/>
             <Tour />
             <Contact />
             <Map />
           </div>
+          <Band />
           <Footer />
         </div>
-        <Modal />
+
       </div>
     );
   }
 }
 
          
-export default App;
+export default HomePage;
 
 {/* // <div id="mobile-menu" className="mobile-menu-btn">
             //     <i className="menu-icon ti-menu"></i>

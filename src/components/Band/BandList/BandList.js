@@ -1,28 +1,44 @@
 import React from 'react';
-import './BandList.css';
+import cx from 'classnames';
+import styles from './BandList.module.scss';
 
 const BandMember = (props) => {
+    const {
+        nameMember, imgMember, onClick = () => {
+        }
+    } = props;
+
+    function handleClick() {
+        onClick(props);
+    }
+
     return (
-        <div className="mt-32 s-col-full col col-third text-center">
-            <p className="member-name">{props.propsMember.nameMember}</p>
-            <img src={props.propsMember.imgMember} alt={props.propsMember.nameMember} className="member-img" />
-        </div>                       
+        <div className={styles.item} onClick={handleClick}>
+            <p className={styles.name}>{nameMember}</p>
+            <img src={imgMember} alt={nameMember} className={styles.img}/>
+        </div>
     );
 }
 
-const renderBandItemList = (bandMemberItem) => {
-    return (<BandMember key={bandMemberItem.id} propsMember={bandMemberItem} />)
-}
 
 const BandMemberList = (props) => {
-    const propsMemberList = props.bandMemberList;
+    const {
+        data = [], className, onItemClick = () => {
+        }
+    } = props;
+
+
+    const renderBandItemList = (item) => {
+        return (<BandMember onClick={onItemClick} key={item?.id} {...item}/>)
+    }
+
     return (
-        <div className="row member-list">
-            {propsMemberList.map(renderBandItemList)}
+        <div className={cx(styles.container, className)}>
+            {data.map(renderBandItemList)}
         </div>
-        
+
     );
 }
 
- 
- export default BandMemberList;
+
+export default BandMemberList;

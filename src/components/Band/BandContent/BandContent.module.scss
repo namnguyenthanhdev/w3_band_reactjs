@@ -1,0 +1,15 @@
+@import "src/themes/index.scss";
+
+.container {
+    .heading {
+        @extend .sectionHeading;
+    }
+    .subHeading {
+        @extend .subHeading;
+    }
+    .text {
+        @extend .text
+    }
+
+
+}

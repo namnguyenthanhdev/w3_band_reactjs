@@ -1,6 +1,10 @@
  import React from 'react';
 
- const Modal = () => {
+ const Modal = ({itemName, onPayClick=()=>{}}) => {
+     function handlePay() {
+         console.log('start pay:',itemName);
+         onPayClick && onPayClick();
+     }
     return (
         <div className="modal js-modal">
         <div className="modal-content js-modal-container">
@@ -10,13 +14,13 @@
 
             <header className="modal-header">
                 <i className="modal-heading-icon ti-bag"></i>
-                Tickets
+                {itemName}
             </header>
 
-            <form className="modal-body">
+            <div className="modal-body">
                 <label for="input-ticket-number" className="modal-label">
                     <i className="ti-shopping-cart"></i>
-                    Tickets, $15 per person
+                    {itemName}
                 </label>
                 <input id="input-ticket-number" type="text" className="modal-input" placeholder="How many?" />
 
@@ -28,11 +32,11 @@
                 <input id="input-ticket-email" type="email" className="modal-input" placeholder="Enter email" />
 
 
-                <button id="buy-ticket">
+                <button id="buy-ticket" onClick={handlePay}>
                     Pay <i className="ti-check"></i>
                 </button>
 
-            </form>
+            </div>
             <footer className="modal-footer">
                 <p className="modal-help">Need <a href="">help?</a></p>
             </footer>
