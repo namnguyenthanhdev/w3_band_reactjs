@@ -7,7 +7,7 @@ import Tour from '../../components/Tour/Tour';
 import Contact from '../../components/Contact/Contact';
 import Map from '../../components/Map/Map';
 import Footer from '../../components/Footer/Footer';
-
+import Anime from '../../components/Anime/Anime';
 
 
 class HomePage extends Component {
@@ -20,6 +20,7 @@ class HomePage extends Component {
           <div id="content">
             <Band className={"firstBand"}/>
             <Tour />
+            <Anime />
             <Contact />
             <Map />
           </div>
