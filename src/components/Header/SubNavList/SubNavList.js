@@ -1,22 +1,22 @@
 import React from 'react';
 
-
 const SubNavListItem = (props) => {
+    const {idLink: id, subNavItemName: itemName} = props;
     return (      
         <li>
-            <a href={props.propsSubNavList.idLink}>
-                {props.propsSubNavList.subNavItemName}
-            </a>
+            <a href={id}>{itemName}</a>
         </li>      
     );
 }
 
-const renderSubNavList = (subNavListItem) => {
-    return (<SubNavListItem propsSubNavList={subNavListItem} />)
-}
+
 
 const SubNavList = (props) => {
-    const { subNavList: propsSubNavList = [] } = props;
+    const {subNavList = [] } = props;
+
+    const renderSubNavList = (item) => {
+        return (<SubNavListItem {...item} />)
+    }
     
     return (
         <li id='nav'>
@@ -25,7 +25,7 @@ const SubNavList = (props) => {
             <i className="nav-arrow-down ti-angle-down"></i>
             </a>
             <ul className="subnav">
-                {propsSubNavList.map(renderSubNavList)}     
+                {subNavList && subNavList.map(renderSubNavList)}     
             </ul>        
         </li>
     );
