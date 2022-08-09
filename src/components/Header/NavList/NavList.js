@@ -1,25 +1,26 @@
 import React from 'react';
 
 const NavListItem = (props) => {
+    const {idLink: id, navItemName: itemName} = props;
     return (
         <li>
-            <a href={props.propsNavListItem.idLink}>
-                {props.propsNavListItem.navItemName}
+            <a href={id}>
+                {itemName}
             </a>
         </li>
     );
 }
 
 const renderNavListItem = (navListItem) => {
-    return (<NavListItem propsNavListItem={navListItem}/>)
+    return (<NavListItem {...navListItem}/>)
 }
 
 const NavList = (props) => {
-    const {navList: propsNavList = []} = props;
+    const {navList = []} = props;
     
     return (
         <div id='nav'>
-           {propsNavList.map(renderNavListItem)}
+           {navList && navList.map(renderNavListItem)}
         </div>
     );
 }

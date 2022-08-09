@@ -3,21 +3,24 @@ import React from 'react';
 
 const soldTicket = 'Sold out';
 
-const TourTicket = (props) => { 
-    const tourTicket = props.propsTourTicket || {};
-    if (tourTicket.status === soldTicket) {
+const TourTicket = (props) => {
+    const {
+        status: ticketStatus,
+        time: ticketDate,
+    } = props; 
+    if (ticketStatus === soldTicket) {
         return(
             <li>
-                {tourTicket.time} 
-                <span className="sold-out">{tourTicket.status}</span>
+                {ticketDate} 
+                <span className="sold-out">{ticketStatus}</span>
             </li>
         ) ;
     }
     else {
         return (
             <li>
-                {tourTicket.time} 
-                <span className="quantity">{tourTicket.status}</span>
+                {ticketDate} 
+                <span className="quantity">{ticketStatus}</span>
             </li>
         );
     }
@@ -28,14 +31,13 @@ const TourTicket = (props) => {
 // }
 
 const TourTicketList = (props) => {
-   
-    const propsTourTicketList = props.tourTicketList || [];
+    const {tourTicketList = []} = props;
     const renderTourTicketList = (tourTicketItem) => {
-        return (<TourTicket propsTourTicket={tourTicketItem}/>);  
+        return (<TourTicket {...tourTicketItem}/>);  
     }
     return (
         <ul className="ticket-list">
-            {propsTourTicketList.map(renderTourTicketList)}
+            {tourTicketList.map(renderTourTicketList)}
         </ul>
     );
 }

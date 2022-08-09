@@ -39,7 +39,7 @@ class Anime extends Component {
         const {heading, subHeading, description, animeList = [], isOpenModal, modalData = {}} = this.state;
 
         return (
-            <div>
+            <div id='anime'>
                 <AnimeContent 
                     animeHeader={heading}
                     animeSubHeader={subHeading}

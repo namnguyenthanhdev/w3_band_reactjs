@@ -19,11 +19,12 @@ const AnimeItem = (props) => {
     }
 
     return (
-        <div onClick={handleClick}>
+        <div>
             <p>{movieTitle}</p>
             <p>{movieEpisodes}</p>
             <img src={img} alt={movieTitle} />
             <button onClick={handleButtonClick}>Click here</button>
+            <button onClick={handleClick}>Buy here</button>
         </div>
     );
 

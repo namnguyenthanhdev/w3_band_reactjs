@@ -1,40 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ContactContent from './ContactContent/ContactContent';
+import ContactForm from './ContactForm/ContactForm';
+import ContactInform from './ContactInform/ContactInform';
 
-const Contact = () => {
-    return (
-        <div id="contact" className="content-sections">
-                <h2 className="section-heading">CONTACT</h2>
-                <p className="section-sub-heading">Fan? Drop a note!</p>
+class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ...ContactInfo,
+        }
+    }
 
-                <div className="row contact-content">
-                    <div className="col col-half s-col-full contact-info">
-                        <p><i className="ti-location-pin"></i>Chicago, US</p>
-                        <p><i className="ti-mobile"></i>Phone: <a href="tel:0982320221">0982320221</a></p>
-                        <p><i className="ti-email"></i>Email: <a
-                                href="mailto:thanhnam21122012@gmail.com">thanhnam21122012@gmail.com</a></p>
-                    </div>
-                    <div className="col col-half s-col-full contact-form">
-                        <form action="" className="action">
-                            <div className="row">
-                                <div className="col col-half s-col-full">
-                                    <input type="text" name="" required className="form-control" placeholder="Name"/>
-                                </div>
-                                <div className="col col-half s-col-full s-mt-8">
-                                    <input type="email" name="" required className="form-control" placeholder="Email"/>
-                                </div>
-                            </div>
-                            <div className="row mt-8">
-                                <div className="col col-full">
-                                    <input type="text" name="" required className="form-control" placeholder="Message"/>
-                                </div>
-                            </div>
-
-                            <input className="mt-16 pull-right btn s-full-width" type="submit" value="SEND"/>
-                        </form>
-                    </div>
-                </div>
+    render() {
+        const {heading, subHeading, information = []} = this.state;
+        return (
+            <div id="contact" className="content-sections">
+                <ContactContent contactHeading={heading} contactSubHeading={subHeading}/>
+                <ContactInform contactInfo={information} />
+                <ContactForm />             
             </div>
-    );
+        );
+    }
+}
+
+const ContactInfo = {
+    heading: 'CONTACT',
+    subHeading: 'Fan? Drop a note!',
+    information: {
+        location: 'Chicago, US',
+        phone: '0982320221',
+        email: 'thanhnam21122012@gmail.com',
+    }  
 }
 
 export default Contact;

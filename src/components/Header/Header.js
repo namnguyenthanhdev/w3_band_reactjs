@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import '../../assets/fonts/themify-icons/themify-icons.css';
+
 
 import NavList from './NavList/NavList';
 import SubNavList from './SubNavList/SubNavList';
@@ -7,26 +9,29 @@ class Header extends Component {
 
   constructor (props) {
     super(props);
-    this.state = headerComponent;
+    this.state = {
+      ...headerComponent,
+    };
   }
-    render () {
-        return (
-            <div id='header'>
-              <ul id="nav">
-                <NavList navList={this.state.navList} id="nav"/>
-                <SubNavList subNavList={this.state.subNavList} id="nav"/>
-              </ul>
+  render () {
+    const {navList = [], subNavList = []} = this.state;
+      return (
+          <div id='header'>
+            <ul id="nav">
+              <NavList navList={navList} id="nav"/>
+              <SubNavList subNavList={subNavList} id="nav"/>
+            </ul>
 
-                <div id="mobile-menu" className="mobile-menu-btn">
-                    <i className="menu-icon ti-menu"></i>
-                </div>
-                
-                <div className="search-btn">
-                    <i className="search-icon ti-search"></i>
-                </div>
-            </div>   
-        )
-    }
+              <div id="mobile-menu" className="mobile-menu-btn">
+                  <i className="menu-icon ti-menu"></i>
+              </div>
+              
+              <div className="search-btn">
+                  <i className="search-icon ti-search"></i>
+              </div>
+          </div>   
+      )
+  }
  }
 
  const headerComponent = {
@@ -42,6 +47,10 @@ class Header extends Component {
         {
           idLink: '#tour',
           navItemName: 'Tour',
+        },
+        {
+          idLink: '#anime',
+          navItemName: 'Anime',
         },
         {
           idLink: '#contact',

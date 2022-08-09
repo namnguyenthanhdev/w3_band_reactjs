@@ -9,25 +9,29 @@ class Tour extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpenTourModal: false,
-            tourComponent: tourComponent
+            isOpenModal: false,
+            modalData: {},            
+            ...tourComponent,
         }
     }
 
-    onTourPlaceItemClick = () => {
-        this.setState({isOpenModal: true});
+    
+    openModal = (item) => {
+        this.setState({isOpenModal: true, modalData: item.results});
+    }
+    closeModal = () => {
+        this.setState({isOpenModal: false, modalData: {}});
     }
 
     render() {
-        const {isOpenModal} = this.state || {};
+        const {heading, subHeading, ticketInfo = [], placeInfo = [], isOpenModal, modalData = {}} = this.state;
         return (
             <div id="tour" className="tour-section">
-                {isOpenModal && <Modal/>}
                 <div className="content-sections">
-                    <TourContent tourHeading={this.state.heading} tourSubHeading={this.state.subHeading}/>
-                    <TourTicketList tourTicketList={this.state.ticketInfo}/>
-                    <TourPlacesList onItemClick={this.onTourPlaceItemClick} tourPlacesList={this.state.placeInfo}/>
-
+                    <TourContent tourHeading={heading} tourSubHeading={subHeading}/>
+                    <TourTicketList tourTicketList={ticketInfo}/>
+                    <TourPlacesList onItemClick={this.openModal} tourPlacesList={placeInfo}/>
+                    {isOpenModal && <Modal itemName={modalData?.title} onPayClick={this.closeModal}/>}
                 </div>
             </div>
         );
@@ -54,19 +58,19 @@ const tourComponent = {
     ],
     placeInfo: [
         {
-            image: '../../assets/img/places/place1.jpg',
+            image: require('../../assets/img/places/place1.jpg'),
             heading: 'New York',
             time: 'Fri 27 Nov 2016',
             description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo',
         },
         {
-            image: '../../assets/img/places/place2.jpg',
+            image: require('../../assets/img/places/place2.jpg'),
             heading: 'Paris',
             time: 'Sat 28 Nov 2016',
             description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo',
         },
         {
-            image: '../../assets/img/places/place3.jpg',
+            image: require('../../assets/img/places/place3.jpg'),
             heading: 'San Francisco',
             time: 'Sun 29 Nov 2016',
             description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo',

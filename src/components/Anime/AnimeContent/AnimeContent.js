@@ -1,17 +1,17 @@
 import React from 'react';
 
 function AnimeContent (props) {
-    const {aboutText, heading, subHeading} = props;
+    const {animeSubHeader, animeHeader, animeDescription} = props;
     return (
         <div>
             <h2>
-                {heading}
+                {animeHeader}
             </h2>
             <p>
-                {subHeading}
+                {animeSubHeader}
             </p>
             <p>
-                {aboutText}
+                {animeDescription}
             </p>
         </div>
     );

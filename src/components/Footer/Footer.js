@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/fonts/themify-icons/themify-icons.css';
 
 const Footer = () => {
     return (
