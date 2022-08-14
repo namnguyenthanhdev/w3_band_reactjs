@@ -9,11 +9,11 @@ const ContactInform = (props) => {
     const {contactInfo = {}, className} = props;
     return (
         <div className={cx(styles.containerInfo, className)}>
-            <div >
-                <p><i className="ti-location-pin"></i>{contactInfo.location}</p>
-                <p><i className="ti-mobile"></i>{PHONE}<a href="tel:0982320221">{contactInfo.phone}</a></p>
-                <p><i className="ti-email"></i>{EMAIL}<a
-                        href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+            <div className={styles.item}>
+                <p className={styles.name}><i className={cx("ti-location-pin", styles.icon)}></i>{contactInfo.location}</p>
+                <p className={styles.name}><i className={cx("ti-mobile", styles.icon)}></i>{PHONE}<a className={styles.link}href="tel:0982320221">{contactInfo.phone}</a></p>
+                <p className={styles.name}><i className={cx("ti-email", styles.icon)}></i>{EMAIL}<a
+                    className={styles.link} href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
             </div>
         </div>
 

@@ -1,17 +1,19 @@
 @import "src/themes/index.scss";
 
+.background {
+  @extend .backgroundBlack;
+}
 .container {
   @extend .sectionCenter;
-  @extend .backgroundBlack;
+
   display: flex;
   flex-flow: column;
-  width: 100%;
 
   .containerHeader {
     flex: 1;
   }
 
-  > .containerBody {
+    > .containerBody {
     display: flex;
     flex-flow: row;
     justify-content: space-around;

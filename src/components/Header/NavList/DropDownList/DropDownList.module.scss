@@ -29,6 +29,7 @@
           color: black;
           background-color: gray;
           > .link {
+            @extend .link;
             color: white;
           }
         }
@@ -36,11 +37,18 @@
 
 
 
+      }
     }
+  }
+  .icon {
+    @extend .icon;
+    margin-left: 20px;
   }
 
 
-}
+
+
+
 
 
 //

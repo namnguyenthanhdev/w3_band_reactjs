@@ -4,7 +4,7 @@ import ContactInform from './components/ContactInform/ContactInform';
 
 import styles from './Contact.module.scss';
 import cx from 'classnames';
-import ContactFormByHook from "./ContactFormByHook";
+import ContactFormByHook from "./ContactForm/ContactFormByHook";
 
 class Contact extends Component {
     constructor(props) {
@@ -19,13 +19,16 @@ class Contact extends Component {
         const {className} = this.props;
         return (
 
-            <div id="contact" className={cx(styles.container, className)}>
-                <ContactContent contactHeading={heading} contactSubHeading={subHeading}
-                                className={styles.containerHeader}/>
-                <div className={styles.containerBody}>
-                    <ContactInform contactInfo={information} className={styles.containerInfo}/>
-                    <ContactFormByHook className={styles.containerForm}/>
+            <div id="contact" className={cx(styles.background, className)}>
+                <div className={styles.container}>
+                    <ContactContent contactHeading={heading} contactSubHeading={subHeading}
+                                    className={styles.containerHeader}/>
+                    <div className={styles.containerBody}>
+                        <ContactInform contactInfo={information} className={styles.containerInfo}/>
+                        <ContactFormByHook className={styles.containerForm}/>
+                    </div>
                 </div>
+
             </div>
         );
     }

@@ -5,24 +5,30 @@
   flex-flow: row wrap;
   justify-content: space-around;
   list-style-type: none;
-  > .item {
+  >.item {
     padding-left: 24px;
     padding-right: 24px;
     font-size: large;
     cursor: pointer;
     position: relative;
+    >.link {
+      @extend .link;
+      color: white;
+      text-transform: uppercase;
+    }
     &:hover {
       color: black;
       background-color: gray;
     }
 
-    > .link {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      line-height: 46px;
 
-    }
+
+    //> .link {
+    //  @extend .link;
+    //  color: white;
+    //  text-transform: uppercase;
+    //
+    //}
 
   }
 

@@ -1,4 +1,19 @@
-
+@import "src/themes/index.scss";
 .containerInfo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  >.item {
+    >.name {
+      >.icon {
+
+      }
+      >.link {
+        @extend .link;
+        color: white;
+      }
+    }
+  }
+
 
 }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
-import styles from '../../ContactForm.module.scss';
+import styles from '../../ContactForm/ContactForm.module.scss';
 
 class ContactForm extends Component {
     constructor(props) {
