@@ -21,15 +21,16 @@ export default function ContactFormByHook() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit, onError)} className={cx(styles.containerForm, className)}>
-                <label className={styles.formName}>Nam</label>
+                <label className={styles.formName}>Name</label>
                 <input
+                    name="Name"
                     type="text"
                     placeholder="Name: "
                     className={styles.formControl}
                     {...register("Name", {
                         required: "This field is required",
                         maxLength: {
-                            value: 80,
+                            value: 3,
                             message: "Total characters must be not exceed 80.",
                         }
                     })}
@@ -43,6 +44,7 @@ export default function ContactFormByHook() {
                     Object.entries(messages).map(renderErrorMessage)
                 }
             />
+
                 <label className={styles.formName}>Gender</label>
                 <select
                     className={styles.formSelect}
@@ -98,6 +100,7 @@ export default function ContactFormByHook() {
                         },
                     })}
                 />
+
 
 
 
