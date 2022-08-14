@@ -4,13 +4,12 @@ import cx from 'classnames';
 
 const DropDownItem = (props) => {
     const {idLink: id, dropDownItemName: itemName} = props;
-    return (      
+    return (
         <li className={styles.item}>
             <a href={id} className={styles.link}>{itemName}</a>
-        </li>      
+        </li>
     );
 }
-
 
 
 class DropDownList extends Component {
@@ -25,18 +24,33 @@ class DropDownList extends Component {
         this.setState({showBox: !this.state.showBox});
     }
 
+    handleOpenToggle = () => {
+        this.setState({showBox: true});
+    }
+
+    handleCloseToggle = () => {
+        this.setState({showBox: false});
+    }
+
+    renderSubNavList = (item) => {
+        return (<DropDownItem key={item?.dropDownItemName} {...item} />)
+    }
 
     render() {
-        const {dropDownList = [], className, showBox } = this.props;
-        const renderSubNavList = (item) => {
-            return (<DropDownItem {...item} />)
-        }
+        const {dropDownList = [], className, itemName} = this.props;
+        const {showBox} = this.state;
+
+
         return (
-            <div className={cx(styles.container ,className)}>
-                <i className="nav-arrow-down ti-angle-down"></i>
-                <div >
-                    {dropDownList && dropDownList.map(renderSubNavList)}
-                </div>
+            <div
+                onClick={this.handleBoxToggle}
+                onMouseOver={this.handleOpenToggle}
+                onMouseOut={this.handleCloseToggle}
+                className={cx(styles.container, className)}
+            >
+                {itemName}
+                <i className="nav-arrow-down ti-angle-down"/>
+                {showBox && dropDownList && dropDownList.map(this.renderSubNavList)}
             </div>
         );
     }

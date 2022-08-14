@@ -5,21 +5,26 @@ import DropDownList from "./DropDownList/DropDownList";
 
 const NavListItem = (props) => {
     const {idLink: id, navItemName: itemName, dropDownList = []} = props;
-    const dropDownItem = 'More';
-    function isDropDown(name) {
-        return name === dropDownItem;
+
+    function isDropDown() {
+        return dropDownList && dropDownList.length > 0;
+    }
+
+    function renderItem() {
+        if (isDropDown(itemName)) {
+            return (
+                <DropDownList className={styles.link} itemName={itemName} dropDownList={dropDownList}/>
+            );
+        }
+        return <div className={styles.link} onClick={() => window.location.href = id}>{itemName}</div>
     }
 
     return (
         <div className={styles.item}>
-            <a href={id} className={styles.link}>
-                {itemName}
-                {isDropDown(itemName) && <DropDownList dropDownList={dropDownList}/>}
-            </a>
+            {renderItem()}
         </div>
-    );
+    )
 }
-
 
 
 const renderNavListItem = (navListItem) => {
@@ -28,10 +33,10 @@ const renderNavListItem = (navListItem) => {
 
 const NavList = (props) => {
     const {navList = [], className} = props;
-    
+
     return (
         <div id='nav' className={cx(styles.container, className)}>
-           {navList && navList.map(renderNavListItem)}
+            {navList && navList.map(renderNavListItem)}
         </div>
     );
 }
