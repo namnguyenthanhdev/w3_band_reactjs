@@ -11,7 +11,7 @@ const SubNavListItem = (props) => {
 
 
 
-const SubNavList = (props) => {
+const DropDownList = (props) => {
     const {subNavList = [] } = props;
 
     const renderSubNavList = (item) => {
@@ -31,4 +31,4 @@ const SubNavList = (props) => {
     );
 }
 
-export default SubNavList;
+export default DropDownList;

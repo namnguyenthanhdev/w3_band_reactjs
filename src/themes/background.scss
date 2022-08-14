@@ -1,0 +1,87 @@
+.backgroundBlack {
+  background-color: black;
+}
+
+.backgroundWhite {
+  background-color: white;
+}
+
+.buttonColor {
+  display: inline-flex;
+  border: none;
+
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  cursor: pointer;
+  :hover {
+    background-color: gray;
+    color: black;
+  }
+}
+
+//place-buy-btn {
+//  background: black;
+//  color: white;
+//  padding: 10px 16px;
+//  text-decoration: none;
+//  display: inline-block;
+//  cursor: pointer;
+//  border: none;
+//}
+//.place-buy-btn:hover {
+//  color: black;
+//  background-color: #ccc;
+
+
+
+
+//.btn {
+//  background: black;
+//  color: white;
+//  padding: 10px 16px;
+//  text-decoration: none;
+//  display: inline-block;
+//  cursor: pointer;
+//  border: none;
+//  text-align: center;
+//}
+//.btn:hover {
+//  color: #000;
+//  background-color: #ccc;
+//}
+
+
+
+
+//#header .mobile-menu-btn {
+//  position: absolute;
+//  top: 0px;
+//  right:  0px;
+//  display: none;
+//}
+//
+//#header .mobile-menu-btn:hover {
+//  background-color: #ccc;
+//}
+//
+//#header .mobile-menu-btn:hover .menu-icon {
+//  color: #000;
+//}
+//
+//#header .mobile-menu-btn,
+//#header .search-btn {
+//  float: right;
+//  line-height: 46px;
+//  padding: 0px 21px;
+//}
+//
+//
+//#header .search-btn:hover {
+//  background-color: #f44336;
+//  cursor: pointer;
+//
+//}
