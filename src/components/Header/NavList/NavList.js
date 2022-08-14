@@ -13,9 +13,7 @@ const NavListItem = (props) => {
     function renderItem() {
         if (isDropDown(itemName)) {
             return (
-                <div className={styles.link}>
-                    <DropDownList itemName={itemName} dropDownList={dropDownList}/>
-                </div>
+                <DropDownList className={styles.link} itemName={itemName} dropDownList={dropDownList}/>
             );
         }
         return <div className={styles.link} onClick={() => window.location.href = id}>{itemName}</div>

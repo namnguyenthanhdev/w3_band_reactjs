@@ -4,7 +4,7 @@
 
 .container {
   position: absolute;
-  background: white;
+
   &:hover {
       display: flex;
       flex-flow: column wrap;
@@ -16,18 +16,24 @@
         padding-left: 24px;
         padding-right: 24px;
         cursor: pointer;
-        &:hover {
-          color: black;
-          background-color: gray;
-        }
-
+        background: white;
         > .link {
           text-decoration: none;
-          color: white;
+          color: black;
           text-transform: uppercase;
           line-height: 46px;
 
         }
+
+        &:hover {
+          color: black;
+          background-color: gray;
+          > .link {
+            color: white;
+          }
+        }
+
+
 
 
     }

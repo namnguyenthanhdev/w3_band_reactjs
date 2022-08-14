@@ -45,14 +45,12 @@ class DropDownList extends Component {
             <div
                 onClick={this.handleBoxToggle}
                 onMouseOver={this.handleOpenToggle}
-                onMouseOut={this.handleCloseToggle} >
+                onMouseOut={this.handleCloseToggle}
+                className={cx(styles.container, className)}
+            >
                 {itemName}
-                {showBox && <div className={cx(styles.container, className)}>
-                    <i className="nav-arrow-down ti-angle-down"></i>
-                    <div>
-                        {dropDownList && dropDownList.map(this.renderSubNavList)}
-                    </div>
-                </div>}
+                <i className="nav-arrow-down ti-angle-down"/>
+                {showBox && dropDownList && dropDownList.map(this.renderSubNavList)}
             </div>
         );
     }

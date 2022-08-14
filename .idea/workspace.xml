@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e122895-f6a9-4500-b470-84e2dd123705" name="Changes" comment="refactor: rehandle form">
+    <list default="true" id="6e122895-f6a9-4500-b470-84e2dd123705" name="Changes" comment="chore: handle toggle event">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/NavList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660449729111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chore: handle toggle event">
+      <created>1660451789623</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660451789623</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new: anime component" />
     <MESSAGE value="refactor: rehandle form" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rehandle form" />
+    <MESSAGE value="chore: handle toggle event" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: handle toggle event" />
   </component>
 </project>
