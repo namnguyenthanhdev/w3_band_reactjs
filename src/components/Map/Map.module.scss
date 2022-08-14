@@ -1,0 +1,9 @@
+@import "src/themes/index.scss";
+
+.container {
+  @extend .sectionFull;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

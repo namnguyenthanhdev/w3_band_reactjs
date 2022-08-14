@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './HomePage.css';
+
 import Header from '../../components/Header/Header';
 import Slider from '../../components/Slider/Slider';
 import Band from '../../components/Band/Band';
@@ -18,7 +18,7 @@ class HomePage extends Component {
           <Header  />
           <Slider />
           <div id="content">
-            <Band className={"firstBand"}/>
+            <Band/>
             <Tour />
             <Anime />
             <Contact />

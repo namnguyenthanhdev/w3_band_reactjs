@@ -1,0 +1,22 @@
+@import "src/themes/index.scss";
+
+.container {
+  @extend .sectionCenter;
+  display: flex;
+  flex-flow: column;
+  .containerHeader {
+    flex: 1;
+  }
+  .containerBody {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    .containerInfo {
+    }
+    .containerForm {
+    }
+  }
+}
+.background {
+  @extend .backgroundBlack;
+}

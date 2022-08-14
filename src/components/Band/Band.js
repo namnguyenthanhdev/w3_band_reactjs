@@ -28,13 +28,15 @@ class Band extends Component {
         const {className = ""} = this.props;
         const {bandContent = {}, bandMemberList = [], isOpenModal, modalData = {}} = this.state;
         return (
-            <div className={cx(styles.container, className)}>
-                <BandContent
-                    heading={bandContent.bandHeading}
-                    subHeading={bandContent.bandSubHeading}
-                    aboutText={bandContent.bandAboutText}/>
-                <BandMemberList onItemClick={this.openModal} data={bandMemberList}/>
-                {isOpenModal && <Modal itemName={modalData?.nameMember} onPayClick={this.closeModal}/>}
+            <div id="band" className={cx(styles.background, className)}>
+                <div className={cx(styles.container, className)}>
+                    <BandContent
+                        heading={bandContent.bandHeading}
+                        subHeading={bandContent.bandSubHeading}
+                        aboutText={bandContent.bandAboutText}/>
+                    <BandMemberList onItemClick={this.openModal} data={bandMemberList}/>
+                    {isOpenModal && <Modal itemName={modalData?.nameMember} onPayClick={this.closeModal}/>}
+                </div>
             </div>
         );
     }

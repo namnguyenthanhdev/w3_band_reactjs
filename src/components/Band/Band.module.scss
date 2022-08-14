@@ -1,3 +1,8 @@
+@import "src/themes/index.scss";
+
 .container {
-  border: 2px solid yellow;
+  @extend .sectionCenter;
+}
+.background {
+  @extend .backgroundWhite;
 }

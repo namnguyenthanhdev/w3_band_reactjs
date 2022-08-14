@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   > .item {
     > .name {
       font-size: 15px;
+      text-align: center;
     }
 
     > .img {

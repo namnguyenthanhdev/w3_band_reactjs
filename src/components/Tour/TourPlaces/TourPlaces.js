@@ -1,4 +1,7 @@
 import React from 'react';
+import styles from './TourPlaces.module.scss';
+import cx from 'classnames';
+
 
 const TourPlacesItem = (props) => {
     const {
@@ -7,6 +10,7 @@ const TourPlacesItem = (props) => {
         time: schedule,
         description: scripts,
         onClick = () => {},
+        className,
     } = props;
     
 
@@ -15,13 +19,14 @@ const TourPlacesItem = (props) => {
     }
 
     return (
-        <div>
-            <img src={img} alt={header} className="place-img"/>
-            <div className="place-content">
-                <h3 className="place-heading">{header}</h3>
-                <p className="place-time">{schedule}</p>
-                <p className="place-desc">{scripts}</p>
-                <button className="btn s-full-width" onClick={handleClick}>Buy Tickets</button>
+        <div className={cx(styles.item, className)}>
+            <img src={img} alt={header} className={styles.img}/>
+            <div className={styles.content}>
+                <p className={styles.header}>{header}</p>
+                <p className={styles.subHeader}>{schedule}</p>
+                <p className={styles.description}>{scripts}</p>
+                <button className={styles.button} onClick={handleClick}>Buy Tickets</button>
+
             </div>
         </div>
     );
@@ -32,6 +37,7 @@ const TourPlacesList = (props) => {
     const {
         tourPlacesList = [],
         onItemClick = () => {},
+        className
     } = props;
 
     function handleItemClick(item) {
@@ -43,11 +49,8 @@ const TourPlacesList = (props) => {
     }
 
     return (
-        <div className="row place-list">
-            <div className="mt-16 s-col-full col col-third">
-                {tourPlacesList && tourPlacesList.map(renderTourPlaces)}
-            </div>
-
+        <div className={cx(styles.container, className)}>
+            {tourPlacesList && tourPlacesList.map(renderTourPlaces)}
         </div>
     );
 };

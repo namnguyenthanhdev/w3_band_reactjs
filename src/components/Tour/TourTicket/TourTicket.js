@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './TourTicket.module.scss';
+import cx from 'classnames';
 
 
 const soldTicket = 'Sold out';
@@ -7,21 +9,22 @@ const TourTicket = (props) => {
     const {
         status: ticketStatus,
         time: ticketDate,
-    } = props; 
+    } = props;
+
     if (ticketStatus === soldTicket) {
         return(
-            <li>
-                {ticketDate} 
-                <span className="sold-out">{ticketStatus}</span>
-            </li>
+            <div className={styles.item}>
+                <p className={styles.text}>{ticketDate} </p>
+                <p className={styles.soldOut}>{ticketStatus}</p>
+            </div>
         ) ;
     }
     else {
         return (
-            <li>
-                {ticketDate} 
-                <span className="quantity">{ticketStatus}</span>
-            </li>
+            <div className={styles.item}>
+                <p className={styles.text}>{ticketDate} </p>
+                <p className={styles.quantity}>{ticketStatus}</p>
+            </div>
         );
     }
 }
@@ -31,14 +34,14 @@ const TourTicket = (props) => {
 // }
 
 const TourTicketList = (props) => {
-    const {tourTicketList = []} = props;
+    const {tourTicketList = [], className} = props;
     const renderTourTicketList = (tourTicketItem) => {
         return (<TourTicket {...tourTicketItem}/>);  
     }
     return (
-        <ul className="ticket-list">
-            {tourTicketList.map(renderTourTicketList)}
-        </ul>
+        <div className={cx(styles.container, className)}>
+                {tourTicketList.map(renderTourTicketList)}
+        </div>
     );
 }
 

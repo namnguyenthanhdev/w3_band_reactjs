@@ -1,11 +1,13 @@
 import React from 'react';
+import cx from 'classnames';
+import styles from './ContactContent.module.scss';
 
 const ContactContent = (props) => {
-    const {contactHeading, contactSubHeading} = props;
+    const {contactHeading, contactSubHeading, className} = props;
     return (
-        <div>
-            <h2 className="section-heading">{contactHeading}</h2>
-            <p className="section-sub-heading">{contactSubHeading}</p>
+        <div className={cx(styles.containerHeader, className)}>
+            <h2 className={styles.heading}>{contactHeading}</h2>
+            <p className={styles.subHeading}>{contactSubHeading}</p>
         </div>
     );
 }

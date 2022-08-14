@@ -1,34 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react';
+import styles from './DropDownList.module.scss';
+import cx from 'classnames';
 
-const SubNavListItem = (props) => {
-    const {idLink: id, subNavItemName: itemName} = props;
+const DropDownItem = (props) => {
+    const {idLink: id, dropDownItemName: itemName} = props;
     return (      
-        <li>
-            <a href={id}>{itemName}</a>
+        <li className={styles.item}>
+            <a href={id} className={styles.link}>{itemName}</a>
         </li>      
     );
 }
 
 
 
-const DropDownList = (props) => {
-    const {subNavList = [] } = props;
-
-    const renderSubNavList = (item) => {
-        return (<SubNavListItem {...item} />)
+class DropDownList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showBox: false,
+        }
     }
-    
-    return (
-        <li id='nav'>
-            <a href="#">
-                More
-            <i className="nav-arrow-down ti-angle-down"></i>
-            </a>
-            <ul className="subnav">
-                {subNavList && subNavList.map(renderSubNavList)}     
-            </ul>        
-        </li>
-    );
+
+    handleBoxToggle = () => {
+        this.setState({showBox: !this.state.showBox});
+    }
+
+
+    render() {
+        const {dropDownList = [], className, showBox } = this.props;
+        const renderSubNavList = (item) => {
+            return (<DropDownItem {...item} />)
+        }
+        return (
+            <div className={cx(styles.container ,className)}>
+                <i className="nav-arrow-down ti-angle-down"></i>
+                <div >
+                    {dropDownList && dropDownList.map(renderSubNavList)}
+                </div>
+            </div>
+        );
+    }
+
 }
 
 export default DropDownList;

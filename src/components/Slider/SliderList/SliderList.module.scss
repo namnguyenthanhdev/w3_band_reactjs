@@ -1,0 +1,40 @@
+@import "src/themes/index.scss";
+@import "react-slideshow-image/dist/styles.css";
+
+.indicator {
+  color: red;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px #666 solid;
+  margin: 0;
+  >.active {
+    color: #fff;
+    background: #666;
+  }
+}
+//https://react-slideshow-image.netlify.app/?path=/story/examples-customarrows--page
+//https://www.npmjs.com/package/react-slideshow-image
+
+.container {
+  position: relative;
+  .img {
+    width: 100%;
+  }
+  .content {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    .heading {
+      @extend .sectionHeading;
+    }
+    .text {
+      @extend .text;
+      text-align: center;
+    }
+  }
+
+
+
+}

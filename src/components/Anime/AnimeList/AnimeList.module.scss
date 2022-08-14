@@ -1,0 +1,69 @@
+@import "src/themes/index.scss";
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    > .item {
+        display: flex;
+        flex-flow: column;
+        @extend .backgroundBlack;
+        width: calc(100% / 3 - 14px);
+        justify-content: center;
+        align-content: center;
+
+
+        > .img {
+            flex: 15;
+            margin: 10px;
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        > .content {
+            flex: 6;
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            justify-content: left;
+            text-align: left;
+            padding: 0px 12px;
+
+            > .header {
+                word-break: break-word;
+                font-weight: 600;
+                margin: 15px 0 0;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+            > .subHeader {
+                word-break: break-word;
+                margin: 15px 0 0;
+                font-weight: 300;
+            }
+
+            > .description {
+                word-break: break-word;
+                margin: 15px 0 0;
+
+            }
+        }
+
+        > .button {
+            @extend .button;
+            padding: 8px 12px;
+            flex: 1;
+            background-color: white;
+            color: black;
+            margin: 12px 0px 12px 12px;
+        }
+    }
+}
+
+
+

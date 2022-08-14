@@ -3,6 +3,8 @@ import TourContent from './TourContent/TourContent';
 import TourPlacesList from './TourPlaces/TourPlaces';
 import TourTicketList from './TourTicket/TourTicket';
 import Modal from "../Modal/Modal";
+import styles from './Tour.module.scss';
+import cx from 'classnames';
 
 
 class Tour extends Component {
@@ -25,9 +27,10 @@ class Tour extends Component {
 
     render() {
         const {heading, subHeading, ticketInfo = [], placeInfo = [], isOpenModal, modalData = {}} = this.state;
+        const {className} = this.props;
         return (
-            <div id="tour" className="tour-section">
-                <div className="content-sections">
+            <div id="tour" className={cx(styles.background, className)}>
+                <div className={cx(styles.container, className)}>
                     <TourContent tourHeading={heading} tourSubHeading={subHeading}/>
                     <TourTicketList tourTicketList={ticketInfo}/>
                     <TourPlacesList onItemClick={this.openModal} tourPlacesList={placeInfo}/>

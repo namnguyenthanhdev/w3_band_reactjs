@@ -1,18 +1,21 @@
 import React from 'react';
 import '../../assets/fonts/themify-icons/themify-icons.css';
+import styles from './Footer.module.scss';
+import cx from 'classnames';
 
-const Footer = () => {
+const Footer = (props) => {
+    const {className} = props;
     return (
-        <div id="footer">
-            <div className="social-media-list">
-                <a href=""><i className="ti-facebook"></i></a>
-                <a href=""><i className="ti-instagram"></i></a>
-                <a href=""><i className="ti-youtube"></i></a>
-                <a href=""><i className="ti-pinterest"></i></a>
-                <a href=""><i className="ti-twitter"></i></a>
-                <a href=""><i className="ti-linkedin"></i></a>
+        <div id="footer" className={cx(styles.background, styles.container)}>
+            <div className={styles.iconLayout}>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-facebook", className)}></i></a>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-instagram", className)}></i></a>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-youtube", className)}></i></a>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-pinterest", className)}></i></a>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-twitter", className)}></i></a>
+                <a href="" className={styles.link}><i className={cx(styles.icon, "ti-linkedin", className)}></i></a>
             </div>
-            <p className="copy-right">Powered by <a href="">w3.css</a></p>
+            <p className={styles.endLine}>Powered by <a href="" className={styles.linkFinal}>w3.css</a></p>
         </div> 
     );
 }

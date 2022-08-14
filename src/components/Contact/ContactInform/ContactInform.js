@@ -1,26 +1,24 @@
 import React from 'react';
 import '../../../assets/fonts/themify-icons/themify-icons.css';
-
+import cx from "classnames";
+import styles from './ContactInform.module.scss'
 const PHONE = 'Phone: ';
 const EMAIL = 'Email: ';
 
 const ContactInform = (props) => {
-    const {...information} = props;
-    const {
-        location: place,
-        phone: numberContact,
-        email: mail,
-    } = information;
-    
+    const {contactInfo = {}, className} = props;
     return (
-        <div className="row contact-content">
-            <div className="col col-half s-col-full contact-info">
-                <p><i className="ti-location-pin"></i>{place}</p>
-                <p><i className="ti-mobile"></i>{PHONE}<a href="tel:0982320221">{numberContact}</a></p>
+        <div className={cx(styles.containerInfo, className)}>
+            <div >
+                <p><i className="ti-location-pin"></i>{contactInfo.location}</p>
+                <p><i className="ti-mobile"></i>{PHONE}<a href="tel:0982320221">{contactInfo.phone}</a></p>
                 <p><i className="ti-email"></i>{EMAIL}<a
-                        href={`mailto:${mail}`}>{mail}</a></p>
-            </div> 
+                        href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+            </div>
         </div>
+
+
+
     );
 }
 export default ContactInform;

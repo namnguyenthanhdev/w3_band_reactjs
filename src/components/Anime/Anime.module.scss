@@ -1,0 +1,8 @@
+@import "src/themes/index.scss";
+
+.container {
+  @extend .sectionCenter;
+}
+.background {
+  @extend .backgroundWhite;
+}

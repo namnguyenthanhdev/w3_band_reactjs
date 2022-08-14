@@ -1,0 +1,92 @@
+@import "src/themes/index.scss";
+
+
+
+.container {
+
+  display: none;
+  &:hover {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      list-style-type: none;
+
+
+      > .item {
+        padding-left: 24px;
+        padding-right: 24px;
+        cursor: pointer;
+        &:hover {
+          color: black;
+          background-color: gray;
+        }
+
+        > .link {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          line-height: 46px;
+
+        }
+
+
+    }
+  }
+
+
+}
+
+
+//
+///* When hover to more, it should have gray back-ground, so that
+//need to hover for all li */
+//#nav .subnav li:hover a, #nav > li:hover > a {
+//  background-color: #ccc;
+//}
+//
+//#nav li:hover a {
+//  color: #000;
+//}
+//
+//#nav .subnav {
+//  display: none;
+//  min-width: 160px;
+//  position: absolute;
+//  top: 100%;
+//  left: 0;
+//
+//  background-color: white;
+//  box-shadow: 0 0 10px rgba(0, 0 , 0, 0.3);
+//
+//}
+//
+//#nav .subnav a {
+//  color: #333;
+//  display: block;
+//  padding: 0 16px;
+//  line-height: 38.5px;
+//}
+//
+//#nav .nav-arrow-down {
+//  font-size: 12px;
+//}
+
+
+//#header .search-btn {
+//  float: right;
+//  line-height: 46px;
+//  padding: 0px 21px;
+//}
+//
+//
+//#header .search-btn:hover {
+//  background-color: #f44336;
+//  cursor: pointer;
+//
+//}
+//
+//#header .menu-icon,
+//#header .search-icon {
+//  color: white;
+//  font-size: 20px;
+//}

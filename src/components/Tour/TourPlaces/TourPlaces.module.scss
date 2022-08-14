@@ -2,14 +2,12 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-flow: row;
+  gap: 20px;
+  font-size: 15px;
 
   > .item {
-    margin: 20px 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    @extend .backgroundWhite;
     > .img {
       margin-left: auto;
       margin-right: auto;
@@ -20,37 +18,30 @@
 
     >.content {
       display: flex;
-      flex-flow: column wrap;
-      width: 185px;
+      flex-flow: column;
+      width: 100%;
+      justify-content: left;
+      text-align: left;
+      padding: 0px 12px;
       > .header {
-        font-size: 15px;
         word-break: break-word;
-        text-align: center;
-        justify-content: center;
-        height: 60px;
-
-        cursor: pointer;
-        &:hover {
-          color: gray;
-        }
-
+        font-weight: 600;
+        margin: 15px 0 0;
       }
+      > .subHeader {
+        word-break: break-word;
+        margin: 15px 0 0;
+        font-weight: 300;
+      }
+
       > .description {
-        margin-top: 20px;
-        font-size: 15px;
         word-break: break-word;
-        text-align: center;
+        margin: 15px 0 0;
+
       }
-      >.buttons {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        height: 60px;
-        >.button {
-          @extend .button;
-          margin: auto;
-        }
+      >.button {
+        @extend .button;
+        margin: 15px 0;
       }
 
     }

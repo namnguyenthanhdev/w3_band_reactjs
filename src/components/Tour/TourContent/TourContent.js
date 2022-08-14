@@ -1,11 +1,13 @@
 import React from 'react';
+import styles from './TourContent.module.scss';
+import cx from 'classnames';
 
 const TourContent = (props) => {
-    const {tourHeading, tourSubHeading} = props;
+    const {tourHeading, tourSubHeading, className} = props;
     return (
-        <div>
-            <h2 className="section-heading text-white">{tourHeading}</h2>
-            <p className="section-sub-heading text-white">{tourSubHeading}</p>
+        <div className={cx(styles.container, className)}>
+            <h2 className={styles.heading}>{tourHeading}</h2>
+            <p className={styles.subHeading}>{tourSubHeading}</p>
         </div>
 
         

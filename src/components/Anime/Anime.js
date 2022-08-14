@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AnimeContent from './AnimeContent/AnimeContent';
 import AnimeList from './AnimeList/AnimeList';
 import Modal from '../Modal/Modal';
+import cx from 'classnames';
+import styles from './Anime.module.scss'
 
 class Anime extends Component {
     constructor(props) {
@@ -37,16 +39,24 @@ class Anime extends Component {
 
     render () {
         const {heading, subHeading, description, animeList = [], isOpenModal, modalData = {}} = this.state;
+        const {className = ""} = this.props;
+
+        // const {className = ""} = this.props;
+        // const {bandContent = {}, bandMemberList = [], isOpenModal, modalData = {}} = this.state;
+        // return (
+        //     <div className={cx(styles.container, className)}>
 
         return (
-            <div id='anime'>
-                <AnimeContent 
-                    animeHeader={heading}
-                    animeSubHeader={subHeading}
-                    animeDescription={description}
-                />
-                <AnimeList onItemClick={this.openModal} data={animeList}/>
-                {isOpenModal && <Modal itemName={modalData?.title} onPayClick={this.closeModal}/>}
+            <div id='anime' className={cx(styles.background, className)}>
+                <div className={cx(styles.container, className)}>
+                    <AnimeContent
+                        animeHeader={heading}
+                        animeSubHeader={subHeading}
+                        animeDescription={description}
+                    />
+                    <AnimeList onItemClick={this.openModal} data={animeList}/>
+                    {isOpenModal && <Modal itemName={modalData?.title} onPayClick={this.closeModal}/>}
+                </div>
             </div>
         );
     }

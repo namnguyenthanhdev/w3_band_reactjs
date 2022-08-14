@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import '../../assets/fonts/themify-icons/themify-icons.css';
-
+import styles from './Header.module.scss';
+import cx from 'classnames';
 
 import NavList from './NavList/NavList';
-import SubNavList from './SubNavList/SubNavList';
+import DropDownList from './NavList/DropDownList/DropDownList';
 
 class Header extends Component {
 
@@ -13,23 +14,33 @@ class Header extends Component {
       ...headerComponent,
     };
   }
-  render () {
-    const {navList = [], subNavList = []} = this.state;
-      return (
-          <div id='header'>
-            <ul id="nav">
-              <NavList navList={navList} id="nav"/>
-              <SubNavList subNavList={subNavList} id="nav"/>
-            </ul>
 
-              <div id="mobile-menu" className="mobile-menu-btn">
-                  <i className="menu-icon ti-menu"></i>
+
+
+  render () {
+    const {navList = [], dropDownList = []} = this.state;
+    const {className} = this.props;
+
+
+
+    return (
+          <div id='header' className={cx(styles.background, styles.display, className)}>
+              <div className={cx(styles.container, className)}>
+                  <div className={styles.navItem}>
+                      <NavList navList={navList} />
+                  </div>
+
+                      {/*{<div> navList.at(5) && <DropDownList dropDownList={dropDownList} /> </div>}*/}
+                  {/*<div>*/}
+                  {/*    <i className="ti-menu"></i>*/}
+                    <div className={cx(styles.searchIcon, className)}>
+                        <i className={cx(styles.icon,'ti-search')}></i>
+                        <i className={cx(styles.icon,'ti-search')}></i>
+                        <i className={cx(styles.icon,'ti-search')}></i>
+
+                    </div>
               </div>
-              
-              <div className="search-btn">
-                  <i className="search-icon ti-search"></i>
-              </div>
-          </div>   
+          </div>
       )
   }
  }
@@ -56,26 +67,27 @@ class Header extends Component {
           idLink: '#contact',
           navItemName: 'Contact',
         },
-        // {
-        //   idLink: '#',
-        //   navItemName: 'More',
-        // },
+        {
+          idLink: '#',
+          navItemName: 'More',
+            dropDownList: [
+                {
+                    idLink:'#',
+                    dropDownItemName:'Merchandise',
+                },
+                {
+                    idLink:'#',
+                    dropDownItemName:'Extras',
+                },
+                {
+                    idLink:'#',
+                    dropDownItemName:'Media',
+                },
+            ],
+        },
       ],
           //icon <i className="nav-arrow-down ti-angle-down"></i>
-      subNavList: [
-          {
-            idLink:'#',
-            subNavItemName:'Merchandise',
-          },
-          {
-            idLink:'#',
-            subNavItemName:'Extras',
-          },
-          {
-            idLink:'#',
-            subNavItemName:'Media',
-          },
-        ],
+
  }
 
  export default Header;
