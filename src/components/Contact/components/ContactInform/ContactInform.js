@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../assets/fonts/themify-icons/themify-icons.css';
+import '../../../../assets/fonts/themify-icons/themify-icons.css';
 import cx from "classnames";
 import styles from './ContactInform.module.scss'
 const PHONE = 'Phone: ';

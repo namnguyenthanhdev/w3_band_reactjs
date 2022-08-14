@@ -2,65 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e122895-f6a9-4500-b470-84e2dd123705" name="Changes" comment="commit: wtf no muon minh commit">
-      <change afterPath="$PROJECT_DIR$/src/components/Anime/AnimeContent/AnimeContent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Anime/AnimeList/AnimeList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/Contact.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactFormByHook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm/FormValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm/HeaderHook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Map/Map.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/Modal.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Slider/SliderList/SliderList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Slider/SliderList/SliderList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tour/Tour.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tour/TourContent/TourContent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tour/TourPlaces/TourPlaces.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tour/TourTicket/TourTicket.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/HomePage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/HomePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/themes/background.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/themes/button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/themes/section.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities/ContactForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities/ContactForm.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities/FormValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactFormByHook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/FormUnitComponent/FormUnitComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/FormUnitComponent/FormUnitComponent.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Anime/Anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Anime/Anime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Anime/AnimeContent/AnimeContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Anime/AnimeContent/AnimeContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Anime/AnimeList/AnimeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Anime/AnimeList/AnimeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Band.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Band.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Band.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Band.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/BandList/BandList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/BandList/BandList.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/SubNavList/SubNavList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Anime/Anime.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Slider/Slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slider/Slider.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slider/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/Tour.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/Tour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/TourContent/TourContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/TourContent/TourContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/TourPlaces/TourPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/TourPlaces/TourPlaces.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/TourTicket/TourTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/TourTicket/TourTicket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/HomePage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/Contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/Contact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactContent/ContactContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactContent/ContactContent.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactFormByHook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/HeaderHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/HeaderHook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactInform/ContactInform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactInform/ContactInform.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,14 +41,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7eb76631-f5cc-40af-b734-74695f864e44" />
-        <option name="url" value="https://github.com/namnguyenthanhdev/w3_band_reactjs.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -101,33 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/reactJs/ReactProject/react-practice&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\reactJs\ReactProject\react-practice\src\utilities" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\components\Contact\ContactContent" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\components\Anime\AnimeContent" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\components\Tour\TourContent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\reactJs\ReactProject\react-practice\src" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\components\Header\NavList" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\pages" />
-      <recent name="E:\reactJs\ReactProject\react-practice\src\pages\Home" />
+      <recent name="$PROJECT_DIR$/src/components/Contact/components" />
+      <recent name="$PROJECT_DIR$/src/components/Contact" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -139,21 +74,6 @@
       <option name="presentableId" value="Default" />
       <updated>1660015636330</updated>
       <workItem from="1660015638869" duration="1859000" />
-      <workItem from="1660044087459" duration="2385000" />
-      <workItem from="1660060648333" duration="7291000" />
-      <workItem from="1660108277134" duration="3204000" />
-      <workItem from="1660121646716" duration="12833000" />
-      <workItem from="1660141228592" duration="12360000" />
-      <workItem from="1660196727941" duration="4575000" />
-      <workItem from="1660205590149" duration="13740000" />
-      <workItem from="1660234129480" duration="1556000" />
-      <workItem from="1660296959469" duration="7162000" />
-      <workItem from="1660304513052" duration="239000" />
-      <workItem from="1660320035838" duration="6275000" />
-      <workItem from="1660361703984" duration="3249000" />
-      <workItem from="1660384085426" duration="16929000" />
-      <workItem from="1660408340413" duration="7592000" />
-      <workItem from="1660443101036" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="add new: anime component">
       <created>1660017831333</created>
