@@ -1,0 +1,45 @@
+@import "../../themes/index";
+
+.containerForm {
+  display: flex;
+  flex-flow: column wrap;
+
+  .formUnit {
+    margin-top: 5px;
+  }
+
+  .formMessage {
+    text-align: left;
+    font-size: 15px;
+    padding: 4px 0 0;
+  }
+
+  .button {
+    @extend .button;
+    background-color: white;
+    color: black;
+    margin-top: 12px;
+    padding: 8px 10px;
+
+    &:hover {
+      background-color: #1ac7b6;
+    }
+  }
+}
+
+
+.invalidContainerForm {
+  @extend .containerForm;
+  border: #f33a58;
+
+
+
+  .formMessage {
+    color: #f33a58;
+  }
+
+}
+
+.errorBorder {
+  border: 1px solid #f00 !important;
+}

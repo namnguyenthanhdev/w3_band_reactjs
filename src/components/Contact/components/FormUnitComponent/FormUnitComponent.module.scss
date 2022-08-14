@@ -1,0 +1,48 @@
+$unitHeight: 23px;
+$unitBorder: 1px solid #b3b3b3;
+$unitBorderRadius: 3px;
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  > .label {
+    min-width: 90px;
+    margin-top: 2px;
+    flex: 1;
+  }
+
+  > .content {
+    flex: 4;
+    font-size: 15px;
+
+    > input, textarea {
+      width: 100%;
+      height: $unitHeight;
+      border: $unitBorder;
+      outline: none;
+
+
+      &:hover {
+        border-color: #1dbfaf;
+      }
+
+    }
+
+
+    > select {
+      width: auto;
+    }
+  }
+}
+
+.rowContainer {
+  @extend .container;
+  flex-direction: row;
+
+}
+
+.columnContainer {
+  @extend .container;
+  flex-direction: column;
+}

@@ -2,21 +2,27 @@
 
 .container {
   @extend .sectionCenter;
+  @extend .backgroundBlack;
   display: flex;
   flex-flow: column;
+  width: 100%;
+
   .containerHeader {
     flex: 1;
   }
-  .containerBody {
+
+  > .containerBody {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    .containerInfo {
+    justify-content: space-around;
+
+    > .containerInfo {
+      width: 50%;
     }
-    .containerForm {
+
+    > .containerForm {
+      min-width: 40%;
+      max-width: 40%;
     }
   }
-}
-.background {
-  @extend .backgroundBlack;
 }
