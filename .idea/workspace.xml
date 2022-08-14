@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e122895-f6a9-4500-b470-84e2dd123705" name="Changes" comment="commit: wtf no muon minh commit">
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/ContactFormByHook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/FormUnitComponent/FormUnitComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/FormUnitComponent/FormUnitComponent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact/components/index.js" afterDir="false" />
+    <list default="true" id="6e122895-f6a9-4500-b470-84e2dd123705" name="Changes" comment="refactor: rehandle form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/Contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/Contact.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactContent/ContactContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactContent/ContactContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactContent/ContactContent.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/ContactForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/ContactFormByHook.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/FormValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactForm/HeaderHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactForm/HeaderHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactInform/ContactInform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact/ContactInform/ContactInform.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact/components/ContactInform/ContactInform.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/DropDownList/DropDownList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavList/NavList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavList/NavList.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +26,35 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/refactor-code" />
+        <entry key="$PROJECT_DIR$" value="hope-branch-name" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/refactor" />
+                    <option name="lastUsedInstant" value="1660449635" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="hope-branch-name" />
+                    <option name="lastUsedInstant" value="1660449634" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660017831333</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor: rehandle form">
+      <created>1660449729111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660449729111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +135,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new: anime component" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new: anime component" />
+    <MESSAGE value="refactor: rehandle form" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: rehandle form" />
   </component>
 </project>

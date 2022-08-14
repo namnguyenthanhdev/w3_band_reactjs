@@ -69,21 +69,13 @@ class Header extends Component {
         },
         {
           idLink: '#',
-          navItemName: 'More',
-            dropDownList: [
-                {
-                    idLink:'#',
-                    dropDownItemName:'Merchandise',
-                },
-                {
-                    idLink:'#',
-                    dropDownItemName:'Extras',
-                },
-                {
-                    idLink:'#',
-                    dropDownItemName:'Media',
-                },
-            ],
+          navItemName: 'More', dropDownList: [{
+                idLink: '#', dropDownItemName: 'Merchandise',
+            }, {
+                idLink: '#', dropDownItemName: 'Extras',
+            }, {
+                idLink: '#', dropDownItemName: 'Media',
+            },],
         },
       ],
           //icon <i className="nav-arrow-down ti-angle-down"></i>
